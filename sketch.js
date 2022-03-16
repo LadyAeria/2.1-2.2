@@ -13,7 +13,7 @@ function preload() {
   let goat = loadImage('goat-meme-with-a-grass-craving-goat.jpeg');
   let notAmused = loadImage('images.jpeg');
   let motherGod = loadImage('mother-of-god-meme-589.jpg');
-  
+
   memes = [trollFace, dogMeme, cryingNo, databaseJoke, blowDry, goat, notAmused, motherGod];
 
   //won't work for some reason (When removed, the rest of the code works. When this is placed back everything else but this doesn't work)
@@ -38,7 +38,7 @@ function draw() {
 
 function mousePressed() {
   background(color(random(150, 255), random(150, 255), random(150, 255)));
-  
+
   //sets random pic generator
   imageMode(CENTER);
   let randomImg = random(memes);
@@ -46,7 +46,7 @@ function mousePressed() {
   image(randomImg, width / 2, height / 2);
   wordRandom();
   mouseClicked();
- 
+
 }
 
   //another mouse click function to have random selected sound play when clicked
@@ -57,7 +57,7 @@ function mouseClicked() {
 
 function wordRandom() {
   //random phrase generator
-  let word = random(words); 
+  let word = random(words);
   text(word, random(width), random(height));
 }
 
